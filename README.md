@@ -36,7 +36,7 @@ As another example, we can create a Bell pair using
 ```
 >>> bp = run(tpow(ket0, 2), tprod(H, I), CNOT)
 ```
-which creates the state |00>, applies a Hadamard gate to the first qubit, and CNOTs the first qubit onto the second qubit. We can measure it in various bases:
+which creates the state `|00>`, applies a Hadamard gate to the first qubit, and CNOTs the first qubit onto the second qubit. We can measure it in various bases:
 ```
 >>> measure(bp, tpow(basis01, 2)) # |00>, |01>, |10>, |11> basis
 array([[ 0.5],
