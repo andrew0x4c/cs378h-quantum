@@ -568,6 +568,9 @@ We measured `|z_2> = |101>`, and indeed `s @ z_2 = 101 @ 101 = 0 (mod 2)`.
 
 Now we actually have enough information to recover `s`. The unique nonzero vector `s` where `s @ z_1 = s @ z_2 = 0 (mod 2)` is `101`. In other words, we can find using row-reduction that the dimension of the null-space of the matrix [1, 1, 1; 1, 0, 1] over F<sub>2</sub> is 1, which has a unique nonzero element.
 
+Exercises:
+- Try not measuring the output register; by the no-communication theorem, this should produce the same result. What are the intermediate states?
+
 
 ## Shor's (period finding part)
 
@@ -670,6 +673,7 @@ Exercises:
 - Run the example enough times to recover `s`.
 - Define an modular exponentiation oracle for N = 15 or N = 21, and actually compute the factorization.
 - Plot the probabilities of measuring states after the QFT.
+- Try not measuring the output register; by the no-communication theorem, this should produce the same result. What are the intermediate states?
 
 
 ## Grover's
