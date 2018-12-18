@@ -102,7 +102,7 @@ ValueError: invalid subscript '{' in einstein sum subscripts string, subscripts 
 
 For a tour of the available features, see [demo_computer.md](demo_computer.md).
 
-## `gen_state.py`
+## `genstate.py`
 
 While studying for the midterm, I saw an example problem where we were asked to synthesize a particular two-qubit (entangled) state starting from |00>. However, there was a catch: you can apply any one-qubit gate, but the only two-qubit gate that can be used is CNOT. I realized that if a similar problem came up I might not get a flash of insight quickly enough, so I derived a general form.
 
