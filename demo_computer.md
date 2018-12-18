@@ -213,7 +213,7 @@ Exercises:
 
 See [Aaronson's lecture notes 4](https://scottaaronson.com/qclec/4.pdf).
 
-No bomb
+Suitcase doesn't have bomb
 ```
 >>> def suitcase(qc):
 ...     pass
