@@ -157,6 +157,7 @@ Note that here the probability of every step succeeding is ~0.9997532801828658<s
 
 Exercises:
 - Try different numbers of iterations.
+- Try it with different start and end states. (What gates would you use? How long would you run?)
 
 
 ## Watched pot effect
@@ -207,6 +208,7 @@ A closer look at each step shows how measuring collapses the superposition into 
 
 Exercises:
 - Try different numbers of iterations.
+- Try it with different start and end states. (What gates would you use? How long would you run?)
 
 
 ## Elitzur-Vaidman bomb
