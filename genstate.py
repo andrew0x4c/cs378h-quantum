@@ -2,7 +2,7 @@
 # https://github.com/andrew0x4c/cs378h-quantum
 # Synthesizing a state from |00> using only 1-qubit gates and CNOT
 
-from __future__ import print_function
+from __future__ import print_function, division
 # ! yes, I wrote this in Python 2
 from quantum import *
 

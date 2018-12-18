@@ -9,6 +9,8 @@ These files are mostly intended to be run in the REPL like a calculator, using
     python -i quantum.py
     python -i computer.py
 
+However, one could also use `from quantum import *` or `from computer import *` to use the files in a script.
+
 I was also informed by a friend that (paraphrasing) this code looks like it was written by a physicist. Make of that what you will...
 
 ## `quantum.py`

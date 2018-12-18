@@ -2,7 +2,7 @@
 # https://github.com/andrew0x4c/cs378h-quantum
 # Simulation of a quantum computer
 
-from __future__ import print_function
+from __future__ import print_function, division
 # ! yes, I wrote this in Python 2
 
 import numpy as np
@@ -32,7 +32,7 @@ def verify_gate(gate):
     dims = gate.shape
     ndims = len(dims)
     assert ndims % 2 == 0
-    assert dims[:ndims/2] == dims[ndims/2:]
+    assert dims[:ndims//2] == dims[ndims//2:]
 
 def show_complex(z):
     if not np.get_printoptions()["suppress"]: return str(z)
@@ -73,7 +73,7 @@ class QC:
         out_inds = lrange(self.ndims)
         try: on = list(on)
         except TypeError: on = [on]
-        gate_inds = on + lrange(self.ndims, self.ndims + len(gate.shape) / 2)
+        gate_inds = on + lrange(self.ndims, self.ndims + len(gate.shape) // 2)
         for qnum, inum in enumerate(on):
             out_inds[inum] = self.ndims + qnum
         self.data = np.einsum(self.data, inp_inds, gate, gate_inds, out_inds)
@@ -207,7 +207,7 @@ def identity(dims):
 
 def C(gate):
     verify_gate(gate)
-    dims = gate.shape[:len(gate.shape)/2]
+    dims = gate.shape[:len(gate.shape)//2]
     arr = np.zeros(((2,) + dims) * 2, dtype=complex)
     dim_ranges = tuple(slice(dim) for dim in dims)
     arr[((0,) + dim_ranges) * 2] = identity(dims)
@@ -246,7 +246,7 @@ def qft(qc, qubits):
         qc.gate(H, x)
         for j, y in enumerate(qubits[i+1:]):
             qc.gate(C(P(2*pi/2**(j+2))), [y, x])
-    for i in range(len(qubits) / 2):
+    for i in range(len(qubits) // 2):
         qc.gate(SWAP, [qubits[i], qubits[~i]])
 
 def cf(x, num=100):

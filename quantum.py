@@ -3,7 +3,7 @@
 # Useful shorthands for various quantum-related math
 
 # ! This file is commented much more than when I was using it
-from __future__ import print_function
+from __future__ import print_function, division
 # ! yes, I wrote this in Python 2
 
 import numpy as np
@@ -415,7 +415,7 @@ def rand_bal(n):
     # any even n, but we usually look at functions from
     # {0, 1}^n -> {0, 1}
     s = 2 ** n
-    nums = [-1] * (s/2) + [1] * (s/2)
+    nums = [-1] * (s//2) + [1] * (s//2)
     return diag(*np.random.permutation(nums))
 # also, yes, the notation is a bit inconsistent.
 # but I_n usually refers to the nxn matrix, while
